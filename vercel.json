@@ -1,12 +1,5 @@
 {
   "version": 2,
-  "alias": "alias.now.sh",
-  "functions": {
-    "api/example/index.js": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",

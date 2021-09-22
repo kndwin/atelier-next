@@ -1,0 +1,55 @@
+.wrapper {
+	z-index: 4;
+	height: 100%;
+	width: 16em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: $atelier-blue;
+	position: fixed;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	transition: right 1s ease;
+
+	.overflowWrapper {
+		padding: 3em 1em 1.5em 1em;
+		height: 100%;
+		overflow-y: auto;
+		-ms-overflow-style: none; /* for Internet Explorer, Edge */
+		scrollbar-width: none; /* for Firefox */
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+				display: none; /* for Chrome, Safari, and Opera */
+		}
+	}
+}
+
+.wrapper.admin {
+	background-color: $atelier-purple;
+	.textAndCloudContainer {
+		.cloud {
+			g {
+				fill: $atelier-purple;
+			}
+		}
+	}
+
+}
+
+.wrapper.hidden {
+	position: fixed;
+	right: -15.5em;
+	overflow: hidden;
+}
+
+.wrapper.large {
+	width: 40em;
+}
+
+.wrapper.large.hidden {
+	position: fixed;
+	right: -39.5em;
+	overflow: hidden;
+}

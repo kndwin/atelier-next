@@ -1,0 +1,94 @@
+.dark.blur,
+.light.blur {
+	font-weight: $font-weight-bold;
+}
+.light {
+	position: relative;
+	background: darken($white, 5%);
+	border: 0px;
+	&:focus {
+		background: $white;
+		border: 1px solid $atelier-blue;
+		color: $atelier-blue;
+	}
+	&::placeholder {
+		color: darken($white, 55%);
+	}
+	&:disabled {
+		border: 1px solid darken($white, 55%);
+		color: darken($white, 55%);
+		&::placeholder {
+			color: darken($white, 55%);
+		}
+	}
+	.warning {
+		z-index: 5;
+		position: absolute;
+		right: -9.2em;
+		top: -5.5em;
+		@include iip1;
+		background-color: $yellow;
+		border-radius: 7px;
+		text-align: left;
+		padding: 0.8em 1em;
+		text-transform: uppercase;
+		font-size: 13px;
+		&:before {
+			position: absolute;
+			bottom: -1em;
+			left: .3em; 
+			border-top: 10px solid $yellow; 
+			border-left: 10px solid $yellow; 
+			border-bottom: 10px solid transparent;
+			border-right: 10px solid transparent;
+			transform: scaleX(0.5);
+			content: "";
+		}
+	}
+}
+.dark {
+	position: relative;
+	border: 1px solid $white;
+	background: $atelier-blue;
+	color: $white;
+	&::placeholder {
+		color: $white;
+	}
+	&:disabled {
+		color: darken($white, 5%);
+		&::placeholder {
+			color: darken($white, 5%);
+		}
+	}
+	.warning {
+		z-index: 5;
+		position: absolute;
+		right: -9.2em;
+		top: -5.5em;
+		@include iip1;
+		background-color: $red;
+		border-radius: 7px;
+		text-align: left;
+		padding: 0.8em 1em;
+		text-transform: uppercase;
+		font-size: 13px;
+		&:before {
+			position: absolute;
+			bottom: -1em;
+			left: .3em; 
+			border-top: 10px solid $red; 
+			border-left: 10px solid $red; 
+			border-bottom: 10px solid transparent;
+			border-right: 10px solid transparent;
+			transform: scaleX(0.5);
+			content: "";
+		}
+	}
+}
+
+.light.admin {
+	&:focus {
+		border: 1px solid $atelier-purple;
+		color: $atelier-purple;
+	}
+}

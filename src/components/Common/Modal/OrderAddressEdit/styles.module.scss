@@ -1,0 +1,59 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: fit-content;
+	width: 45em;
+	background-color: $white;
+	box-shadow: 0 0 25px  darken($white, 20%);
+	border-radius: 20px;
+	padding: 2em 3em;
+	display: flex;
+
+	.title {
+		flex: 1;
+		@include h2;
+		line-height: 1em;
+		font-size: 24px;
+		color: $atelier-blue;
+		margin-bottom: 1em;
+	}
+
+
+	.editWrapper {
+		width: 100%;
+		@include p1;
+		color: $atelier-blue;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.grid {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 5px;
+			margin: 5px 0 10px 0;
+		}
+
+		.buttonWrapper {
+			display: flex;
+			flex-direction: row-reverse;
+			width: 100%;
+		}
+
+		.text {
+			@include p2;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+			margin-top: .5em;
+		}
+
+		.textBold {
+			@include iip2;
+		}
+
+	}
+}

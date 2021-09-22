@@ -1,0 +1,45 @@
+.activityFeedWrapper {
+	color: $white;
+	.title {
+		@include h3;
+		text-transform: capitalize;
+	}
+	.activity {
+		display: flex;
+		margin: 1em 0;
+		.imageWrapper {
+			padding: 2.5em 1.5em 0 0;
+			.circle {
+				border-radius: 50%;
+				height: 2em;
+				width: 2em;
+				max-width: 3em;
+				background-color: $white;
+				padding: .1em;
+				.image {
+					height: 100%; 
+					width: 100%;
+					border-radius: 50%;
+					object-fit: contain;
+				}
+			}
+		}
+		.text {
+			display: flex;
+			flex-direction: column;
+			.date {
+				@include h6;
+				margin: .3em 0;
+			}
+
+			.product {
+				@include h6;
+			}
+
+			.content {
+				@include p2;
+				margin: 1em 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.productSidebarWrapper {
+	height: 100%;
+	width: 100%;
+	background-color: $off-white;
+	border-right: 2px solid darken($off-white, 10%);
+
+	.productsOverflowWrapper {
+		overflow-y: auto;
+		margin-top: 1em;
+		height: calc(100% - 2em);
+
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 0;
+		}
+		.productSidebar {
+			padding: 0 1em;
+			.cardWrapper {
+				margin: .3em .3em;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.card {
+
+			}
+		}
+	}
+}

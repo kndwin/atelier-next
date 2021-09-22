@@ -1,0 +1,266 @@
+.ordersWrapper {
+  width: 100%;
+  color: $white;
+  padding: 0 1em;
+  .ordersDetails.h3 {
+    margin-bottom: 3em;
+  }
+  .h3 {
+    @include h3;
+    margin-bottom: 1em;
+  }
+  .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9em repeat(4, 1fr);
+    grid-column-gap: 0.2em;
+    .title {
+      @include iip2;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 5px;
+      line-height: 1em;
+    }
+    .text {
+      margin-top: 0;
+      padding-top: 0;
+      line-height: 1em;
+      @include p2;
+    }
+  }
+
+  .carbonOffset {
+    display: grid;
+    grid-template-columns: 7em repeat(4, 1fr);
+    grid-column-gap: 1em;
+    margin-top: 1em;
+    .image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: scale-down;
+      background-color: $white;
+      border-radius: 50%;
+    }
+
+    .boxWrapper {
+      grid-column: span 4;
+      height: fit-content;
+      .box {
+        background-color: $white;
+        border-radius: 10px;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $atelier-blue;
+        padding: 1em 1em;
+        width: 100%;
+        .text {
+          @include p2;
+          line-height: 1.4em;
+        }
+        .stat {
+          width: 10em;
+          margin: 0 0.5em;
+          .h1 {
+            @include h1;
+            line-height: 1em;
+            margin: 0 0.2em;
+          }
+          .text {
+            @include iip2;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .flex {
+        margin-top: 0.5em;
+        display: flex;
+        width: 100%;
+        .circle {
+          height: 1.5em;
+          width: 1.5em;
+          border-radius: 50%;
+          background-color: $white;
+        }
+        .box {
+          width: 100%;
+          margin-left: 0.5em;
+          height: 1.5em;
+          background-color: $white;
+          padding: 0.5em 0.5em 0.3em 0.5em;
+          border-radius: 15px;
+          .text {
+            @include iip2;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 1.5px;
+    background-color: $white;
+    margin: 2em 0;
+    opacity: 50%;
+  }
+
+  .paymentStats {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-column-gap: 3em;
+    width: 100%;
+    .progressLine {
+      width: 40%;
+      height: 2px;
+      background-color: $white;
+      margin: 0.2em 0;
+    }
+    .stats {
+      .stat {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1.5em;
+      }
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      .text {
+        @include p2;
+        text-transform: uppercase;
+      }
+      .flex {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .textStat {
+        text-transform: uppercase;
+        @include iip2;
+        width: fit-content;
+      }
+    }
+    .payments {
+			.exclaimation {
+				transform: scale(.85);
+				margin-bottom: .5em;
+				circle {
+					r: 10.5;
+					fill: $atelier-blue;
+					stroke: $white;
+				}
+				text {
+					fill: $white;
+				}
+			}
+      .flexCol {
+        display: flex;
+        flex-direction: column;
+        .dateWrapper {
+          .flex {
+            display: flex;
+            justify-content: space-between;
+            .text {
+              @include p2;
+            }
+            .h1 {
+              @include h1;
+              line-height: 1em;
+            }
+          }
+        }
+        .addressAndPayment {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 2em;
+          margin-top: 1em;
+          margin-bottom: 2em;
+          .icon {
+            height: fit-content;
+            width: 2em;
+            margin-right: 0.5em;
+          }
+          .flex {
+            display: flex;
+						align-items: flex-end;
+          }
+        }
+        .text {
+          @include p2;
+					white-space: pre-wrap;
+        }
+        .textBold {
+          @include iip2;
+          text-transform: uppercase;
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+  }
+
+	.total {
+		.totalStats,
+		.flex {
+			display: flex;
+			margin: .2em 0;
+			width: 100%;
+			align-items: center;
+		}
+
+		.totalStats {
+			margin-bottom: 1em;
+		}
+
+		.flexCol {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.circle {
+			height: 1.5em;
+			width: 1.5em;
+			border-radius: 50%;
+			background-color: $white;
+		}
+		
+		.box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			color: $atelier-blue;
+			width: 100%;
+			margin-left: 0.5em;
+			height: 1.5em;
+			background-color: $white;
+			padding: 0.5em 0.5em 0.3em 0.5em;
+			border-radius: 15px;
+			.text {
+				@include iip2;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
+		}
+
+		.paymentText {
+			width: 12em;
+			margin: 0 0 0 1em;
+			.h1 {
+				@include h1;
+				color: $white;
+				line-height: 1em;
+			}
+			.iip2 {
+				@include iip2;
+				color: $white;
+				font-size: 10px;
+				text-align: justify;
+			}
+		}
+	}
+}

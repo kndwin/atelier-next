@@ -1,0 +1,60 @@
+.wrapper {
+	height: 75vh;
+	width: 50vw;
+	border-radius: 20px;
+	position: relative;
+
+	.mapWrapper {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		border-radius: 20px;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0,0,0, .3);
+		}
+	}
+
+	.image {
+		height: 5em;
+		width: 5em;
+		position: absolute;
+		top: 15em;
+		left: 20em;
+		object-fit: scale-down;
+		border-radius: 50%;
+		border: 5px solid $atelier-blue;
+		background-color: $white;
+	}
+
+	.box {
+		padding: 1em;
+		border-radius: 10px;
+		width: 11em;
+		background-color: $atelier-blue;
+		position: absolute;
+		top: 21em;
+		left: 20em;
+		.title {
+			@include iip2;
+			color: $white;
+		}
+		.text {
+			@include p2;
+			color: $white;
+		}
+	}
+
+	.close {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: -3em;
+	}
+}

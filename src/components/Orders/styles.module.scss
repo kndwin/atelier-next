@@ -1,0 +1,9 @@
+.orders {
+	padding: 0 1em;
+	.delete {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-left: 2em;
+		cursor: pointer;
+	}
+}

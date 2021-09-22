@@ -1,0 +1,190 @@
+.timelineWrapper {
+	.tag {
+		position: relative;
+		border-radius: 10px;
+		width: fit-content;
+		border: 1.5px solid $white;
+		@include iip1;
+		background-color: $white;
+		margin-bottom: 3em;
+
+		.line {
+			height: calc(100% + 19px);
+			top: 20.4px;
+			left: 4.5px;
+			width: 1.5px;
+		}
+
+		.content {
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.tag.dark {
+		background-color: $atelier-blue;
+		color: $white;
+	}
+
+	.tag.red {
+		background-color: $red;
+		border-color: $red;
+		color: $white;
+	}
+	.tag.borderFaded {
+		box-shadow: 0 0 0 4px rgba(255,255,255, 0.5);
+		border: 0;
+		.line {
+			left: 6.2px;
+		}
+	}
+
+	.default {
+		position: relative;
+		padding-left: 2em;
+		color: $white;
+		@include iip1;
+		padding-bottom: 2.5em;
+
+	}
+	.dot {
+		position: absolute;
+		top: 0;
+		left: 1.1px;
+		height: 1em;
+		width: 1em;
+		border-radius: 50%;
+		background-color: $white; 
+	}
+
+	.dotHollow {
+		position: absolute;
+		top: 0;
+		left: 1.1px;
+		height: 1em;
+		width: 1em;
+		border-radius: 50%;
+		border: 2px solid $white;
+		background-color: $atelier-blue; 
+	}
+
+	.dotHollow.faded {
+		border-color: rgba(255, 255, 255, .5);
+	}
+
+	.line {
+		position: absolute;
+		width: 1.5px;
+		top: 12px;
+		height: calc(100%);
+		background-color: $white;
+		left: 6px;
+	}
+
+	.line.faded {
+		background-color: rgba(255, 255, 255, .5);
+	}
+
+	.activeDot {
+		position: absolute;
+		bottom: 20%;
+		left: 3px;
+		height: .7em;
+		width: .7em;
+		border-radius: 50%;
+	}
+
+	.activeDot.white {
+		background-color: $white;
+		border: 2.5px solid lighten($white, 20%);
+	}
+
+	.activeDot.red {
+		background-color: $red;
+		border: 0;
+	}
+
+	.content.faded {
+		color: rgba(255, 255, 255, .7);
+	}
+	.content.bold {
+		font-weight: $font-weight-bold;
+	}
+
+	.dot.large {
+		top: -3.5px;
+		left: -3px;
+		height: 21px;
+		width: 21px;
+		padding: 0;
+	}
+
+	.plus {
+		z-index: 2;
+		position: relative;
+		cursor: pointer;
+		&:before {
+			position: absolute;
+			content: '';
+			height: 14px; 
+			width: 2px;
+			top: 0px;
+			left: -18px;
+			background-color: $atelier-blue;
+			opacity: 80%;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			height: 2px; 
+			width: 14px;
+			top: 6px;
+			left: -24px;
+			opacity: 80%;
+			background-color: $atelier-blue;
+		}
+	}
+
+	.cursor {
+		cursor: pointer;
+	}
+
+	.large {
+		padding: .3em 3em .2em 3em;
+	}
+
+	.small {
+		padding: .3em .5em .2em .5em;
+	}
+
+	.gradient {
+		position:absolute;
+    z-index:2;
+    right:0; bottom:0; left:0;
+    height: 100px; /* adjust it to your needs */
+    background: linear-gradient(rgba(255,255,255,0) 0%, $atelier-blue 70%);
+	}
+}
+
+
+.timelineWrapper.admin {
+	.default {
+		.dotHollow {
+			background-color: $atelier-purple;
+		}
+	}
+	.plus {
+		&:before {
+			background-color: $atelier-purple;
+		}
+		&:after {
+			background-color: $atelier-purple;
+		}
+	}
+
+	.tag.dark {
+		background-color: $atelier-purple;
+	}
+	.gradient {
+		background: linear-gradient(rgba(255,255,255,0), $atelier-purple);
+	}
+}

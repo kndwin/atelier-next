@@ -1,0 +1,12 @@
+import { makeVar } from "@apollo/client";
+export { timelineVar } from "./timelineVar";
+export { chatVar } from "./chatVar";
+export { productVar } from "./productVar";
+export { customersVar } from "./customersVar";
+export { userVar } from "./userVar";
+export { leadsVar } from "./leadsVar";
+export { orderVar } from './orderVar'
+export { modalVar } from './modalVar'
+export { screenVar } from './screenVar'
+export { newsVar } from './newsVar'
+export { drawerMessageVar } from './drawerMessageVar'

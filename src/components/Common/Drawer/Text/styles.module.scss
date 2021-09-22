@@ -1,0 +1,32 @@
+.textWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.drawerMessage {
+		@include h3;
+		color: $white;
+		line-height: 1.25em;
+		font-size: 22px;
+		white-space: pre-wrap;
+	}
+
+	.cloud {
+		margin: 2.2em auto 2.7em auto;
+		height: 4em;
+		width: auto;
+	}
+
+	.bottleWrapper {
+		margin: 3em 0;
+		.bottle {
+			transform: scale(1.25);
+			path { 
+				fill: $white; 
+			}
+		}
+	}
+
+	.rotate {
+		transform: rotate(20deg); 
+	}
+}

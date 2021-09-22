@@ -1,0 +1,61 @@
+.wrapper {
+	height: 100%;
+	width: 100%;
+	padding: 0 2em; 
+	overflow-y: auto;
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+		padding: 2em 0;
+	}
+}
+.productForm {
+	width: calc(100% - 4em);
+	height: 100%;
+	padding: 2em;
+	margin: 2em;
+	border: 1px solid #000;
+	border-radius: 15px;
+	.title {
+		@include h3;
+	}
+
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		.value {
+			width: calc(50% - 2m);
+			margin: 1em;
+			.label {
+				@include h4;
+			}
+		}
+	}
+}
+
+.cartForm {
+	height: 100%;
+	width: calc(100% - 4em);
+	padding: 2em;
+	margin: 2em;
+	border: 1px solid #000;
+	border-radius: 15px;
+	.title {
+		@include h3;
+	}
+
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		.value {
+			width: calc(50% - 2m);
+			margin: 1em;
+			.label {
+				@include h4;
+			}
+		}
+	}
+}

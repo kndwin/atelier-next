@@ -1,0 +1,106 @@
+.productOverviewWrapper {
+	padding: 1em;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 0.4em;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: darken($white, 30%);
+		border-radius: 10px;
+	}
+
+	.spacer {
+		height: 1em;
+	}
+
+	.image {
+		height: 10em;
+		width: 10em;
+		object-fit: scale-down;
+	}
+
+	.caption {
+		margin-top: 2em;
+		text-transform: lowercase;
+	}
+}
+
+.productFormWrapper {
+	background-color: $white;
+	padding: 1em;
+	overflow-y: auto;
+	.upload {
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border: 1px dashed darken($white, 20%);
+		border-radius: 10px;
+		width: 100%;
+		height: 100%;
+		padding: 1em 0;
+		.uploadText {
+			margin-top: 1em;
+			@include iip1;
+			color: 1px dashed darken($white, 20%);
+		}
+	}
+	.title {
+		@include h3;
+	}
+
+	.section {
+		margin: 1em 0 2em 0;
+		.inputs {
+			margin: .3em 0;
+		}
+		.gridThreeCol {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-column-gap: 1em;
+		}
+		.gridTwoCol {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 1em;
+		}
+		.title {
+			@include h6;
+			color: $atelier-purple;
+		}
+		.text, .subtitle {
+			@include iip1;
+			color: $atelier-purple;
+		}
+		.subtitle {
+			margin-bottom: 1em;
+		}
+		.text {
+			display: flex;
+			align-items: center;
+			margin: 1em 0;
+		}
+		.icon {
+			margin-right: .5em;
+		}
+		.row {
+			margin: .3em 0;
+			padding-top: .75em;
+			padding-bottom: .75em;
+		}
+	}
+
+	.spacer {
+		height: 2em;
+		width: 100%;
+	}
+	.flexReverse {
+		margin-top: 3em;
+		display: flex;
+		width: 100%;
+		flex-direction: row-reverse;
+	}
+}

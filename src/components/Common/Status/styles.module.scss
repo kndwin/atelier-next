@@ -1,0 +1,29 @@
+.status {
+	border-radius: 15px;
+	padding: 1px 10px;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+
+	.text {
+		@include h6;
+		color: $white;
+	}
+}
+
+.status.purple {
+	background-color: $atelier-purple;
+}
+.status.blue {
+	background-color: $atelier-blue;
+}
+.status.green {
+	background-color: $green;
+}
+.status.orange {
+	background-color: $orange;
+}
+
+.status.alignCenter {
+	align-items: center;
+}

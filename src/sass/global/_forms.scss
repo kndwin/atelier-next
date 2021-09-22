@@ -1,0 +1,124 @@
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  color: $textcolor;
+  width: 100%;
+  padding: 0.35em 1.5em;
+  border-radius: 20px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+	@include iip1;
+  @include media-down(tablet) {
+    font-size: 14px;
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    &:hover,
+    &:focus,
+    &:active {
+      -webkit-box-shadow: 0 0 0 30px white inset;
+    }
+  }
+  &[disabled] {
+    border-color: lighten($off-white, 5%);
+    background-color: darken($white, 5%);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  &:focus {
+    border-color: darken($off-white, 5%);
+    outline: none;
+  }
+  @include placeholder() {
+    color: rgba($textcolor, 0.5);
+  }
+  &::-moz-placeholder {
+    color: darken($off-white, 25%) !important;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  display: inline-block;
+}
+
+textarea {
+  height: 125px;
+  line-height: 1.5em;
+  padding: 15px;
+}
+
+select {
+  display: block;
+  color: rgba($textcolor, 0.5);
+  padding: 16px 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 1px rgba($black, 0.04);
+  border-radius: 5px;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+select:focus {
+  box-shadow: 0 0 1px 3px rgba($atelier-blue, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: $textcolor;
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include media-down(mobile) {
+    flex-wrap: wrap;
+  }
+}
+.field {
+  width: 100%;
+  position: relative;
+  &.split {
+    width: 49%;
+    @include media-down(mobile) {
+      width: 100%;
+    }
+  }
+  input,
+  textarea {
+    // transition: padding 0.3s;
+    & + span {
+      display: block;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      position: absolute;
+      color: rgba($textcolor, 0.4);
+      top: -4px;
+      transition: opacity 0.5s, top 0.5s;
+    }
+    &:not(:placeholder-shown) {
+      padding: 26px 15px 10px;
+      & + span {
+        position: absolute;
+        top: 4px;
+        left: 16px;
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.inProduction {
+	padding: 0 1.3em;
+	.cardWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: .5em 0;
+	}
+}
+
+.orders{
+	.table {
+		display: flex;
+		flex-direction: column;
+		.row {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr) 16em;
+			justify-content: space-evenly;
+			width: 100%;
+			box-shadow: 0 0 5px darken($white, 25%);
+			border-radius: 7px;
+			margin: 4px 0; 
+			@include h6;
+			padding: .1em 1.5em;
+			min-height: 2.5em; 
+
+			.title {
+				padding: .5em; 
+				@include h6;
+			}
+
+			.cell {
+				padding: .5em; 
+				@include iip1;
+			}
+
+			.bold {
+				font-weight: $font-weight-bold;
+			}
+		}
+	}
+}

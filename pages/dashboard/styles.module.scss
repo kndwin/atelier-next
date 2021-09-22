@@ -1,0 +1,72 @@
+.dashboardWrapper {
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 2px);
+	width: 100%;
+	align-items: stretch;
+
+	.title {
+		@include h3;
+		margin-bottom: 1em;
+		text-transform: capitalize;
+	}
+
+	.description {
+		@include p1;
+		font-size: 12px;
+	}
+
+	.centerWrapper {
+		border-right: 2px solid darken($off-white, 10%);
+		.flex {
+			display: flex;
+			height: 12em;
+			.interesting,
+			.action {
+				background-color: $off-white;
+				border: 2px solid darken($off-white, 10%);
+			}
+
+			.action {
+				padding: 2em 1em 0 1em;
+				flex: 4;
+				border-right: 0;
+				border-top: 0;
+				border-left: 0
+			}
+
+			.interesting {
+				padding: 2em 1em 0 2em;
+				border-right: 0;
+				border-top: 0;
+				flex: 2;
+			}
+		}
+	}
+
+	.dashboardContent {
+		display: grid;
+		min-height: 0;
+		height: 100%;
+		grid-template-columns: min-content 1fr min-content;
+		grid-template-rows: 100%;
+
+
+		.inProductionWrapper {
+			padding-top: 1em;
+		}
+
+	}
+
+	.orders {
+		padding: 1em;
+		.title {
+			padding: .5em 0 .5em 1em;
+		}
+	}
+
+	.inProductionWrapper {
+	}
+	
+}
+

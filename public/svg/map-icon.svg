@@ -1,0 +1,9 @@
+<svg id="Location_tracking" data-name="Location/tracking" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Group_1055" data-name="Group 1055">
+    <circle id="Ellipse_57" data-name="Ellipse 57" cx="12.5" cy="12.5" r="12.5" fill="#fff"/>
+  </g>
+  <g id="Group_1056" data-name="Group 1056" transform="translate(6.534 4.419)">
+    <path id="Path_102" data-name="Path 102" d="M1441.006,1292.715c0,3.933-6.073,9.914-6.073,9.914s-6.073-5.878-6.073-9.914a6.073,6.073,0,1,1,12.146,0Z" transform="translate(-1428.86 -1286.641)" fill="#fff" stroke="#7C0AFF" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_66" data-name="Ellipse 66" cx="3.262" cy="3.262" r="3.262" transform="translate(2.811 2.46)" fill="#fff" stroke="#7C0AFF" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

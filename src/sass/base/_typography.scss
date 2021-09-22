@@ -1,0 +1,118 @@
+/*=============================================>>>>>
+= Typography Mixins and Variables =
+===============================================>>>>>*/
+
+// Font weight variables
+// NOTE: Use 400 and 700 weights only
+// $font-weight-thin: 100;
+// $font-weight-extra-light: 200;
+// $font-weight-light: 300;
+$font-weight-regular: 400;
+// $font-weight-medium: 500;
+// $font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+// $font-weight-extra-bold: 800;
+// $font-weight-black: 900;
+
+
+@mixin heading-font() {
+  font-family: 'Aktiv Grotesk Extended', sans-serif;
+  font-weight: $font-weight-regular;
+}
+
+@mixin body-font() {
+  font-family: 'News Cycle Regular', sans-serif;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+	letter-spacing: .2px;
+  line-height: 1.6em;
+  @include media-down(mobile) {
+    font-size: 14px;
+  }
+}
+
+@mixin h1 {
+  @include heading-font();
+  font-size: 32px;
+  line-height: 2.5em;
+  @include media-down(large-mobile) {
+    font-size: 42px;
+  }
+}
+
+@mixin h2 {
+  @include heading-font();
+  font-size: 32px;
+  line-height: 2.25em;
+  @include media-down(tablet) {
+    font-size: 32px;
+  }
+}
+
+@mixin h3 {
+  @include heading-font();
+	letter-spacing: -.48px;
+	line-height: 18px;
+	font-size: 16px;
+  @include media-down(tablet) {
+		font-size: 16px;
+  }
+}
+
+@mixin h4 {
+  font-family: 'News Cycle Bold';
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+	line-height: 1.2em;
+	letter-spacing: .2px;
+  text-transform: uppercase;
+}
+
+@mixin h5 {
+  @include heading-font();
+  font-size: 12px;
+  line-height: 1em;
+}
+
+@mixin h6 {
+  font-family: 'News Cycle Bold';
+  font-weight: $font-weight-bold;
+  font-size: 12px;
+	letter-spacing: .2px;
+  line-height: 1.58em;
+  text-transform: uppercase;
+}
+
+@mixin p1 {
+  @include body-font();
+  font-size: 13px;
+  line-height: 1.08em;
+}
+
+@mixin p2 {
+  font-family: 'Aktiv Grotesk Regular';
+  font-weight: $font-weight-regular;
+  font-size: 12px;
+  line-height: 13px;
+	letter-spacing: .36px;
+}
+
+@mixin iip1 {
+  font-family: 'News Cycle Regular', sans-serif;
+  font-weight: $font-weight-regular;
+  text-transform: uppercase;
+	letter-spacing: .2px;
+  font-size: 12px;
+  line-height: 1.08em;
+}
+
+@mixin iip2 {
+  font-family: 'Aktiv Grotesk Regular';
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+  line-height: 1.08em;
+}
+
+@mixin mbt {
+  @include h6
+}

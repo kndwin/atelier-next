@@ -1,0 +1,247 @@
+$buttons: (
+  "disabled": $off-black,
+  "black": $black,
+  "atelier-blue": $atelier-blue,
+  "green": $green,
+  "orange": $orange,
+  "red": $red,
+  "reversed-disabled": $off-black,
+  "reversed-black": $black,
+  "reversed-atelier-blue": $atelier-blue,
+  "reversed-green": $green,
+  "reversed-orange": $orange,
+  "reversed-red": $red,
+  "sidebar": $black,
+);
+
+@mixin buttonColor($color, $background) {
+  background: $background;
+  color: $color;
+  border-color: $color;
+  &:hover {
+    background: $color;
+    color: $background;
+    border-color: $background;
+  }
+}
+
+.button.atelier-blue.admin {
+	color: $atelier-purple;
+	border-color: $atelier-purple;
+	&:hover {
+		background-color: $atelier-purple;
+		border-color: $atelier-purple;
+	}
+}
+
+.button.reversed-atelier-blue.admin {
+	background-color: $atelier-purple;
+	&:hover {
+		color: $atelier-purple;
+		border-color: $atelier-purple;
+	}
+}
+
+.button.sidebar.admin {
+	&:hover {
+		background-color: $atelier-purple;
+		border-color: $atelier-purple;
+	}
+}
+
+
+.button.textAlignCenter {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+.button.large {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	.percentageWrapper {
+		top: 4px;
+	}
+}
+
+.button.medium {
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	.percentageWrapper {
+		top: 4px;
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.button.small {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+.button.sidebar.admin {
+	.notificationWrapper {
+		background-color: $atelier-purple;
+		border-color: $atelier-purple;
+	}
+}
+
+.button {
+	cursor: pointer;
+	position: relative;
+	max-width: 100%;
+	@include mbt();
+	color: $atelier-blue;
+	border: 1px solid $atelier-blue;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: $font-weight-bold;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: left;
+	padding: 0.7em 1.3em;
+	&.large {
+		font-size: 15px;
+	}
+	&:hover {
+		background: darken($white, 5%);
+		border-color: darken($white, 5%);
+		text-decoration: none;
+	}
+
+	@each $name, $color in $buttons {
+		&.#{$name} {
+			@if $name == disabled {
+				color: darken($white, 50%);
+				background: darken($white, 5%);
+				border-color: darken($white, 50%);
+				cursor: not-allowed;
+				pointer-events: none;
+			} @else if $name == sidebar {
+				color: $black;
+				background-color: $white;
+				border-color: $black;
+				&:hover {
+					color: $white;
+					background-color: $atelier-blue;
+					border-color: $atelier-blue;
+				}
+				.notificationWrapper {
+					background-color: $atelier-blue;
+					border-color: $atelier-blue;
+					color: $white;
+					&:hover {
+						color: $atelier-blue;
+						background-color: $white;
+						border-color: $atelier-blue;
+					}
+				}
+			} @else {
+				@if (str-index($name, "reversed")) {
+					.notificationWrapper {
+						@include buttonColor($color, $white);
+					}
+					.percentageWrapper {
+						&:hover {
+							background-color: $color;
+							color: $white;
+							stroke: $white;
+						}
+						.percentage {
+							stroke: $color;
+							&:hover {
+								stroke: $white;
+							}
+						}
+						.percentageText {
+							color: $color;
+							&:hover {
+								color: $white;
+							}
+						}
+					}
+					@include buttonColor($white, $color);
+				} @else {
+					.notificationWrapper {
+						@include buttonColor($white, $color);
+					}
+					@include buttonColor($color, $white);
+				}
+			}
+		}
+	}
+
+	&.outline {
+		background: transparent;
+		&:hover {
+			background: transparent;
+		}
+	}
+	.notificationWrapper {
+		position: absolute;
+		top: 0px;
+		right: -1em;
+		border-radius: 50%;
+		background-color: $white;
+		border: 1px solid $black;
+		color: $black;
+		text-decoration: none;
+		font-size: 10px;
+		font-weight: $font-weight-bold;
+		width: 2.3em;
+		height: 2.3em;
+		text-align: center;
+		z-index: 2;
+		.notificationText {
+			z-index: 2;
+		}
+	}
+
+	.percentageWrapper {
+		position: absolute;
+		top: -0.15em;
+		right: -1.2em;
+		border-radius: 50%;
+		background-color: $white;
+		color: $black;
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: $font-weight-bold;
+		width: 2.1em;
+		height: 2.1em;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		.percentageText {
+			font-size: 12px;
+				@include h6;
+			z-index: 2;
+			position: absolute;
+			vertical-align: middle;
+		}
+		.percentage {
+			z-index: 2;
+			stroke-width: 2;
+			fill: none;
+			stroke-width: 2;
+		}
+		.percentage.blue,
+		.percentageText.blue {
+			color: $atelier-blue;
+			stroke: $atelier-blue;
+		}
+
+		.percentage.orange,
+		.percentageText.orange {
+			color: $orange;
+			stroke: $orange;
+		}
+
+		.percentage.green,
+		.percentageText.green {
+			color: $green;
+			stroke: $green;
+		}
+	}
+}

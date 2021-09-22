@@ -1,0 +1,142 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	box-shadow: 0 0 25px  darken($white, 20%);
+	border-radius: 20px;
+	padding: 2em 3em 0 3em;
+	position: relative;
+
+	.content {
+		height: 75vh;
+		width: 50em;
+		overflow-y: auto;
+		overflow-x: hidden;
+		-ms-overflow-style: none; /* for Internet Explorer, Edge */
+		scrollbar-width: none; /* for Firefox */
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none; /* for Chrome, Safari, and Opera */
+		}
+	}
+
+	.gradient {
+		position: absolute;
+		border-radius: 20px;
+    z-index: 2;
+    right:0; bottom:0; left:0;
+    height: 3em; /* adjust it to your needs */
+    background: linear-gradient(rgba(255,255,255,0) 0%, $white 70%);
+	}
+
+	.close {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: -3em;
+		g {
+			stroke: $atelier-purple;
+			stroke-width: 1.5px;
+		}
+	}
+
+	.title {
+		@include h2;
+		line-height: 1em;
+		font-size: 24px;
+		color: $atelier-purple;
+		margin-bottom: 1em;
+	}
+
+	.gridTwoCol {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: .5em;
+		margin-bottom: 1.5em;
+	}
+
+	.flexCol {
+		height: fit-content;
+		.title {
+			padding-left: .5em;
+			@include iip1;
+			text-transform: uppercase;
+			color: $atelier-purple;
+		}
+		.input {
+			margin-bottom: .5em;
+		}
+		.logoWrapper {
+			border: 1px solid #000;
+			border-radius: 15px;
+			height: 6em;
+			width: 100%;
+			.logo {
+				height: 100%;
+				width: 100%;
+				margin: 0 auto;
+			}
+		}
+	}
+	.flexBetween, .flex {
+		display: flex;
+		align-items: center;
+		.title {
+			margin-bottom: 0;
+		}
+		margin-bottom: 2em;
+	}
+	.flexBetween {
+		margin-bottom: 3em;
+		.delete {
+			cursor: pointer;
+			padding-left: .5em;
+			@include iip1;
+			text-transform: uppercase;
+			color: $atelier-purple;
+		}
+		justify-content: space-between;
+	}
+}
+
+.wrapper.delete {
+	height: 12em;
+	width: 40em;
+	background-color: $atelier-purple;
+	border-radius: 20px;
+	padding: 2em;
+	flex-direction: row;
+	align-items: center;
+	.title {
+		flex: 1;
+		@include h2;
+		line-height: 1em;
+		color: $white;
+		margin-right: 1em;
+		margin-bottom: 0;
+	}
+	.content {
+		height: 100%;
+		width: 19em;
+		@include p1;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.caption {
+			margin-bottom: 1em;
+		}
+
+		.cancel {
+			margin-top: 1em;
+			cursor: pointer;
+			@include p1;
+			color: $white;
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+	}
+}

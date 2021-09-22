@@ -1,0 +1,38 @@
+.wrapper {
+  width: 100%;
+  padding: 2.5em 1em 1em 1.6em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.4em, 1fr));
+  grid-column-gap: .5em;
+  grid-row-gap: 1.7em;
+}
+
+.addNewCustomer {
+  position: relative;
+	background-color: $white;
+  border: 1px solid darken($white, 30%);
+  border-radius: 5px;
+  padding: 0.6em 0.7em;
+  flex-direction: column;
+  height: 10.5em;
+  width: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px $atelier-purple;
+    border: 1px solid $atelier-purple;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+	.content {
+		@include iip1;
+		width: 7em;
+		text-align: center;
+	}
+
+}

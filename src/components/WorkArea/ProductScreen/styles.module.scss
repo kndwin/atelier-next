@@ -1,0 +1,99 @@
+.userCard,
+.userCardExpanded {
+	position: relative;
+  box-shadow: 0 0 5px 3px #eee;
+  display: flex;
+  cursor: pointer;
+  border-radius: 9px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  width: 100%;
+  height: 100%;
+  .description {
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    padding: 0.7em 0 0 1.5em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    .shortIntro {
+			@include h4;
+    }
+  }
+  img {
+    border-radius: 50%;
+  }
+	.edit {
+		z-index: 2;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		path[data-name='Rectangle 213'] {
+			stroke: $black;
+		}
+		&:hover {
+			g {
+				opacity: 100%;
+				path[data-name='Path 122'] {
+					stroke: $atelier-purple;
+					fill: $atelier-purple;
+				}
+				g {
+					path[data-name='Path 119'] {
+						stroke: $white;
+						fill: $atelier-purple;
+					}
+					path[data-name='Rectangle 213'] {
+						stroke: $white;
+						fill: $atelier-purple;
+					}
+				}
+			}
+		}
+	}
+}
+
+.userCardExpanded {
+  align-items: flex-start;
+  padding-bottom: 2.5em;
+  img {
+    margin: 0.4em 0 0 0.7em;
+    height: 7.6em;
+  }
+  .longIntro {
+    padding: 1.5em 0 0 0;
+    font-family: "Aktiv Grotesk Extended";
+    line-height: 1em;
+    font-size: 16px;
+  }
+}
+
+.userCard {
+  height: 6em;
+  img {
+    margin: 0.5em;
+    height: 3.8em;
+  }
+}
+
+.userWrapper {
+  display: grid;
+  width: 100%;
+  height: fit-content;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.3em;
+  padding: 3.6em 1.5em 1.2em 1.6em;
+}
+
+
+.productWrapper {
+  width: 100%;
+  padding: 2.5em 1em 1em 1.6em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.4em, 1fr));
+  grid-column-gap: 2.5em;
+  grid-row-gap: 1.7em;
+}

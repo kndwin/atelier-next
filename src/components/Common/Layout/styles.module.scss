@@ -1,0 +1,89 @@
+.dashboardWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .twoCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw);
+    height: 100%;
+    transition: width 1s;
+    .main {
+      padding-right: 4em;
+    }
+  }
+  .threeCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 16em);
+    height: 100%;
+    transition: width 1s;
+  }
+
+	.threeCol.large,
+	.twoCol.large {
+    width: calc(100vw - 40em);
+	}
+
+  .main {
+    overflow-y: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+		&::-webkit-scrollbar {
+			width: 0.4em;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: darken($white, 30%);
+			border-radius: 10px;
+		}
+  }
+	.iconLogo {
+		z-index: 5;
+		cursor: pointer;
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		rect {
+			transition: fill .5s ease;
+			fill: $atelier-blue;
+		}
+		path {
+			transition: fill .5s ease;
+			fill: $white;
+		}
+	}
+
+	.iconLogo.reverse {
+		rect {
+			transition: fill .5s ease;
+			fill: $white;
+		}
+		path {
+			transition: fill .5s ease;
+			fill: $atelier-blue;
+		}
+	}
+
+	.iconLogo.admin {
+		rect {
+			fill: $atelier-purple;
+		}
+	}
+
+	.iconLogo.reverse.admin {
+		rect {
+			fill: $white;
+		}
+		path {
+			fill: $atelier-purple;
+		}
+	}
+}

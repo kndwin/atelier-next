@@ -1,0 +1,26 @@
+.centerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardAndHeroWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 10em);
+  margin: 0 10em;
+  width: 50em;
+}
+
+.card {
+  background-color: $atelier-blue;
+  margin: 1.3em 0 0 5.6em;
+  padding: 1.5em 1.9em 1em 1.9em;
+  min-width: 21.4em;
+  height: 19.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+}

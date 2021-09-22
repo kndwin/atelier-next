@@ -1,0 +1,40 @@
+/*=============================================>>>>>
+= Global Styles =
+===============================================>>>>>*/
+
+body {
+  background: $white;
+  color: $textcolor;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @include media-down(small-mobile) {
+    padding: 0 10px;
+  }
+}
+
+.main-content {
+
+}
+
+.mobile-down {
+  @include media-up(mobile) {
+    display: none;
+  }
+}
+
+.tablet-down {
+  @include media-up(tablet) {
+    display: none;
+  }
+}
+
+@import "buttons";
+@import "fonts";
+@import "forms";
+@import "reset";
+@import "print";
+@import "typography";

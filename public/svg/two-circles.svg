@@ -1,0 +1,13 @@
+<svg id="Button_response" data-name="Button response" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Group_1125" data-name="Group 1125">
+    <circle id="Ellipse_57" data-name="Ellipse 57" cx="12.5" cy="12.5" r="12.5" fill="#fff"/>
+  </g>
+  <g id="Path_130" data-name="Path 130" transform="translate(3.353 8.5)" fill="#fff">
+    <path d="M 4 7.5 C 2.070090055465698 7.5 0.5 5.929910182952881 0.5 4 C 0.5 2.070090055465698 2.070090055465698 0.5 4 0.5 C 5.929910182952881 0.5 7.5 2.070090055465698 7.5 4 C 7.5 5.929910182952881 5.929910182952881 7.5 4 7.5 Z" stroke="none"/>
+    <path d="M 4 1 C 2.345789909362793 1 1 2.345789909362793 1 4 C 1 5.654210090637207 2.345789909362793 7 4 7 C 5.654210090637207 7 7 5.65421009063207 7 4 C 7 2.345789909362793 5.654210090637207 1 4 1 M 4 0 C 6.209139823913574 0 8 1.790860176086426 8 4 C 8 6.209139823913574 6.209139823913574 8 4 8 C 1.790860176086426 8 0 6.209139823913574 0 4 C 0 1.790860176086426 1.790860176086426 0 4 0 Z" stroke="none" fill="#7c0aff"/>
+  </g>
+  <g id="Ellipse_72" data-name="Ellipse 72" transform="translate(13.647 8.5)" fill="#fff" stroke="#7c0aff" stroke-width="1">
+    <circle cx="4" cy="4" r="4" stroke="none"/>
+    <circle cx="4" cy="4" r="3.5" fill="none"/>
+  </g>
+</svg>

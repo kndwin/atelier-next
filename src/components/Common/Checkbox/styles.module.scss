@@ -1,0 +1,24 @@
+.wrapper {
+	.circle {
+		cursor: pointer;
+		height: 1.5em;
+		width: 1.5em;
+		border-radius: 50%;
+		background-color: $white;
+		border: 1.5px solid $atelier-blue;
+	}
+	.circle.admin {
+		border-color: $atelier-purple;
+	}
+	.tick {
+		position: relative;
+		&:before {
+			position: absolute;
+			top: -5px;
+			left: 2px;
+			content: '\2713';
+			color: $black;
+			font-size: 2em;
+		}
+	}
+}

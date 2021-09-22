@@ -1,0 +1,64 @@
+.wrapper {
+  color: $black;
+  border-right: 1px solid lighten($black, 85%);
+  height: 100%;
+  width: 100%;
+  max-width: 13.7em;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3em 2em;
+  align-items: center;
+  justify-content: space-between;
+
+  .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .avatar {
+      border-radius: 50%;
+      height: 3.7em;
+      width: auto;
+      margin-bottom: 0.7em;
+    }
+    .name {
+			@include h5;
+      margin: 0 0 0 0;
+      letter-spacing: 0;
+    }
+    .company {
+      margin: 0;
+      font-family: "Aktiv Grotesk Extended";
+      font-size: 13px;
+      line-height: 1.5em;
+      font-weight: $font-weight-bold;
+    }
+    .accountSettings {
+      margin: 0.7em 0 1em 0;
+      font-size: 11px;
+      @include iip1;
+      color: darken($white, 50%);
+      text-transform: uppercase;
+    }
+    .buttonWrapper {
+      margin: .5em 0 0 0;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .bottom {
+    .bottomButtons {
+      color: $black;
+      border-color: $black;
+      &:hover {
+        color: $white;
+        border-color: $atelier-blue;
+      }
+    }
+    width: 100%;
+    button {
+      margin: 0.4em 0 0 0;
+    }
+  }
+}

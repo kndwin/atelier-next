@@ -1,0 +1,9 @@
+.textarea {
+	margin: 1em 0;
+	background-color: darken($white, 5%);
+	resize: none;
+	@include p2;
+	text-transform: none;
+	vertical-align: top;
+	border: 0px;
+}

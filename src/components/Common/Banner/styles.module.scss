@@ -1,0 +1,75 @@
+.banner {
+	min-height: 2.5em;
+	width: 100%; 
+	overflow-x: hidden;
+	background-color: #fffaf2;
+	border: 1px solid darken($white, 10%);
+	@include iip1;
+	text-transform: uppercase; 
+	display: flex;
+	align-items: center;
+
+	.title {
+		font-weight: $font-weight-bold;
+	}
+
+	.product, .customer, .customerTitle {
+		padding-top: .3em;
+		margin-right: 8em;
+		margin-left: 2em; 
+	}
+
+	.newsWrapper {
+		display: flex;
+		justify-content: center;
+		overflow-x: hidden;
+		width: 100%;
+		position: relative;
+
+		.newsUpdate {
+			color: $atelier-blue;
+			@include p1;
+			margin: 0 .5em .2em 2.5em;
+			&::before {
+				content: "";
+				position: absolute; 
+				left: 15px;
+				top: 10px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: $atelier-blue;
+			}
+		}
+
+		.new {
+			display: inline-flex;
+			margin: 0 .5em;
+			align-items: center;
+			color: $atelier-blue;
+
+			.title {
+				@include p1;
+			}
+
+			.readButton {
+				color: $atelier-blue;
+				border: 1px solid $atelier-blue;
+				border-radius: 15px;
+				height: fit-content;
+				width: fit-content;
+				padding: .3em;
+				margin-left: .5em;
+				margin-right: 1em;
+				margin-bottom: .2em;
+				&:hover {
+					background-color: $atelier-blue;
+					border: 0;
+					color: $white;
+					text-decoration: none;
+					font-weight: $font-weight-bold;
+				}
+			}
+		}
+	}
+}

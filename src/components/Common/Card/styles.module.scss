@@ -1,0 +1,120 @@
+.productCard {
+  position: relative;
+	background-color: $white;
+  border: 1px solid darken($white, 30%);
+  border-radius: 5px;
+  padding: 0.6em 0.7em;
+  flex-direction: column;
+  height: 10.5em;
+  width: 8em;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px $atelier-blue;
+    border: 1px solid $atelier-blue;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .box, .tube, .bottle {
+    height: 5em;
+		margin: auto auto;
+  }
+  .name {
+    @include iip1;
+  }
+	.image {
+		width: fit-content;
+		height: 7em;
+		margin: 0 auto;
+	}
+  .new,
+  .notification {
+    background-color: $atelier-blue;
+    color: $white;
+		font-weight: $font-weight-bold;
+		padding-bottom: 3px;
+    @include h6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notification {
+    top: -1em;
+    right: -1em;
+    position: absolute;
+    height: 2em;
+    width: 2em;
+  }
+  .new {
+    top: -1.25em;
+    right: -1.25em;
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+  }
+
+	.statusWrapper {
+		position: static;
+		top: .5em;
+	}
+
+	.children {
+		@include iip1;
+		font-size:10px;
+		height:100%; 
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.addProduct {
+		height: 1.5em;
+		width: 1.5em;
+		position: absolute;
+		bottom: -2em;
+		left: 3.25em;
+		z-index: 5;
+	}
+}
+
+.productCard.admin {
+  .new,
+  .notification {
+		background-color: $atelier-purple;
+	}
+  &:hover {
+    box-shadow: 0 0 0 1px $atelier-purple;
+    border: 1px solid $atelier-purple;
+  }
+	.box, .tube, .bottle {
+		path {
+			fill: $atelier-purple;
+		}
+	}
+
+	.tube {
+		rect {
+			fill: $atelier-purple;
+		}
+		circle { 
+			fill: $atelier-purple;
+		}
+	}
+}
+
+.productCard.large {
+  width: 10em;
+	height: 13em; 
+	.image {
+		margin-top: 20px;
+		height: 8em;
+	}
+}

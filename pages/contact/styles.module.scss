@@ -1,0 +1,25 @@
+.wrapper {
+  background-color: $white;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    margin: 0 1em 1em 1em;
+    width: 40em;
+		.letsTalk {
+			margin: 2em 0
+		}
+    .textarea {
+      margin: 1em 0;
+      background-color: darken($white, 5%);
+      resize: none;
+			height: 30em;
+      @include p2;
+      text-transform: none;
+      vertical-align: top;
+      border: 0px;
+    }
+  }
+}

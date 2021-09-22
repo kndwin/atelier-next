@@ -1,0 +1,128 @@
+.threeCol {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 13em repeat(2, 1fr);
+	grid-column-gap: 3em;
+}
+
+.twoColSmall, .twoCol {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.twoCol {
+	grid-column-gap: 3em;
+}
+.twoColSmall {
+	grid-column-gap: 1em;
+}
+
+.icon {
+	height: fit-content;
+	width: 2em;
+	margin-right: .5em;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.card {
+	position: relative;
+	padding: 1em;
+	width: calc(100% - 2em); 
+	margin: 1em;
+	border-radius: 10px; 
+	box-shadow: 0 0 3px 3px darken($white, 10%);
+}
+
+.title {
+	@include h3;
+	margin-bottom: 1em;
+}
+
+.image {
+	height: 10em;
+	width: 10em;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-bottom: 1em;
+}
+
+.subtitle {
+	@include h6;
+}
+
+.text, .setting {
+	@include p1;
+	font-size: 12px;
+}
+.setting {
+	margin-bottom: 1.5em;
+}
+.edit {
+	cursor: pointer;
+	right: 1em;
+	top: 1em;
+	position: absolute;
+	height: 2em;
+	&:hover {
+		g {
+			opacity: 100%;
+			path[data-name='Path 122'] {
+				stroke: $atelier-blue;
+				fill: $atelier-blue;
+			}
+			g {
+				path[data-name='Path 119'] {
+					stroke: $white;
+					fill: $atelier-blue;
+				}
+				path[data-name='Rectangle 213'] {
+					stroke: $white;
+					fill: $atelier-blue;
+				}
+			}
+		}
+	}
+}
+
+
+.editWrapper {
+	.editImageWrapper {
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.columnWrapper {
+		display: flex;
+		flex-direction: column;
+		input {
+			margin-bottom: .3em;
+		}
+	}
+	.gridWrapper {
+		margin-top: .3em;
+		margin-bottom: 1em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-column-gap: 1em;
+		grid-row-gap: .3em;
+	}
+	.inputWrapper {
+		position: relative;
+		.iconInput {
+			position: absolute;
+			top: 4px; 
+			right: 0;
+		}
+	}
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
